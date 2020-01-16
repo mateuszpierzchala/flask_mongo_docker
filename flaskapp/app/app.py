@@ -6,8 +6,8 @@ application = Flask(__name__)
 
 application.config["MONGO_URI"] = 'mongodb://' + os.environ['MONGODB_USERNAME'] + ':' + os.environ['MONGODB_PASSWORD'] + '@' + os.environ['MONGODB_HOSTNAME'] + ':28017/' + os.environ['MONGODB_DATABASE']
 
-@applicaiton.route('/')
-def index();
+@application.route('/')
+def index():
 	return jsonify(
 		status = True,
 		message = 'welcome to the jungle!!!'
